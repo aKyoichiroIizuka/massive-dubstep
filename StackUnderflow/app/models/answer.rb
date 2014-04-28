@@ -4,6 +4,7 @@ class Answer < ActiveRecord::Base
   
   def total_points
     ans=self.answer_votes
+    	.sum(:value)
     return ans
   end
 end
